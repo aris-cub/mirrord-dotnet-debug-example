@@ -1,0 +1,7 @@
+{
+    "target": "deployment/dotnet-guestbook",
+    "feature": {
+      "env": true,
+      "network": true
+    }
+  }
