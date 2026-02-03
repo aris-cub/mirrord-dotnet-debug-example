@@ -1,7 +1,18 @@
 {
     "target": "deployment/dotnet-guestbook",
     "feature": {
-      "env": true,
-      "network": true
+      "env": {
+        "exclude": "REDIS_HOST;REDIS_PORT;REDIS_SERVICE_*;REDIS_PORT_*",
+        "override": {
+          "REDIS_HOST": "localhost",
+          "REDIS_PORT": "6379"
+        }
+      },
+      "network": {
+        "incoming": "steal",
+        "outgoing": false,
+        "dns": false
+      },
+      "fs": "local"
     }
   }

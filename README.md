@@ -15,10 +15,11 @@ This is a sample web application built with ASP.NET Core and Redis to demonstrat
 
 ## Prerequisites
 
-- .NET 8.0 SDK or higher
+- .NET 10.0 SDK or higher
 - Docker and Docker Compose
 - Kubernetes cluster
 - mirrord CLI installed
+- macOS or Linux (Windows users can use WSL2)
 
 ## Quick Start
 
@@ -35,13 +36,19 @@ cd mirrord-dotnet-debug-example
 kubectl create -f ./kube
 ```
 
-3. Debug with mirrord:
+3. Port-forward Redis to your local machine:
+
+```bash
+kubectl port-forward svc/redis 6379:6379
+```
+
+4. In a separate terminal, run with mirrord:
 
 ```bash
 mirrord exec -f mirrord.json -- dotnet run --project src
 ```
 
-The application will be available at http://localhost:5000
+The application will be available at http://localhost:8080
 
 ## Architecture
 

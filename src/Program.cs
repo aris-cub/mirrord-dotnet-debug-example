@@ -36,7 +36,7 @@ List<Dictionary<string, object>> GetEntries()
     var result = new List<Dictionary<string, object>>();
     foreach (var entry in entries)
     {
-        var parsed = JsonSerializer.Deserialize<Dictionary<string, object>>(entry!);
+        var parsed = JsonSerializer.Deserialize<Dictionary<string, object>>((string)entry!);
         if (parsed != null) result.Add(parsed);
     }
     return result;
