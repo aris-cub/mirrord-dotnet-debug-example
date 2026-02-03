@@ -1,11 +1,12 @@
 {
     "target": "deployment/dotnet-guestbook",
     "feature": {
+      "env": true,
       "network": {
         "incoming": "mirror",
         "outgoing": true,
         "dns": true
       },
-      "fs": "local"
+      "fs": "read"
     }
   }

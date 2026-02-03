@@ -15,7 +15,7 @@ This is a sample web application built with ASP.NET Core and Redis to demonstrat
 
 ## Prerequisites
 
-- .NET 10.0 SDK or higher
+- .NET 9.0 SDK or higher
 - Docker and Docker Compose
 - Kubernetes cluster
 - mirrord CLI installed
