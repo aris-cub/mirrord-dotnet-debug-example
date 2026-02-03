@@ -39,7 +39,7 @@ kubectl create -f ./kube
 3. Port-forward Redis to your local machine:
 
 ```bash
-kubectl port-forward svc/redis 6379:6379
+mirrord port-forward -L 6379:redis:6379
 ```
 
 4. In a separate terminal, run with mirrord:
